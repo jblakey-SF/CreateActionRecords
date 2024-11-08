@@ -1,4 +1,4 @@
-public with sharing class CreateAppointmentMetric {
+public with sharing class CreateMetric {
     @InvocableMethod
     public static void execute(List<Requests> requests) {
         for (Requests request : requests) {
