@@ -31,7 +31,7 @@ public with sharing class MetricsHandler {
  
             appointment_Action__c appointmentAction = new appointment_Action__c();
             appointmentAction.Appointment_Id__c = contract.recordId;
-            appointmentAction.Name = 'Appointment Action Created';
+            appointmentAction.Name = 'Appointment Action  ' + ' -  ' + contract.action;
             appointmentAction.Action_Type__c = contract.action;
             appointmentAction.Team_Member__c = contract.userId;
             appointmentAction.Date__c = System.today();
@@ -53,7 +53,7 @@ public with sharing class MetricsHandler {
      
             case_Action__c caseAction = new case_Action__c();
             caseAction.Case_Id__c = contract.recordId;
-            caseAction.Name = 'Case Action Created';
+            caseAction.Name = 'Case Action' + ' - ' + contract.action;
             caseAction.Action_Type__c = contract.action;
             caseAction.Team_Member__c = contract.userId;
             caseAction.Date__c = System.today();
@@ -74,7 +74,7 @@ public with sharing class MetricsHandler {
        
             claim_Action__c claimAction = new claim_Action__c();
             claimAction.Claim_Id__c = contract.recordId;
-            claimAction.Name = 'Claim Action Created';
+            claimAction.Name = 'Claim Action ' + ' - ' + contract.action;
             claimAction.Action_Type__c = contract.action;
             claimAction.Team_Member__c = contract.userId;
             claimAction.Date__c = System.today();
